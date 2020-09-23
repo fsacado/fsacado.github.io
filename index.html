@@ -134,10 +134,9 @@
 	<p>
 		If you have any questions regarding privacy while using the Application, or have questions about our practices, please contact us via email at loann.meignant@gmail.com.
 	</p>
-
-	<iframe style="display: none" id="iframe" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 </div>
+
+<iframe style="display: none" id="iframe" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 </body>
 
@@ -146,8 +145,7 @@
 	let iframe = document.getElementById('iframe');
 	if (window.location.search.substr(1)) {
 		let id = window.location.search.substr(1);
-		iframe.attributes.src = `https://www.youtube.com/embed/${id}`;
-		container.style.removeProperty('display');
+		iframe.src = `https://www.youtube.com/embed/${id}`;
 		iframe.style.removeProperty('display');
 	} else {
 		container.style.removeProperty('display');
