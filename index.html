@@ -143,7 +143,7 @@
 	let container = document.getElementById('container');
 	if (window.location.search.substr(1)) {
 		let id = window.location.search.substr(1);
-		container.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${id}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+		container.innerHTML = `<iframe id="iframe" width="560" height="315" src="https://www.youtube.com/embed/${id}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
 		container.style.removeProperty('display');
 	} else {
 		container.style.removeProperty('display');
