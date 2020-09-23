@@ -3,7 +3,7 @@
 
 <body>
 
-<div id="container">
+<div id="container" style="display: none">
 	<h1>
 		PRIVACY POLICY MODEL FOR MOBILE APPLICATIONS
 	</h1>
@@ -140,9 +140,13 @@
 </body>
 
 <script>
+	let container = document.getElementById('container');
 	if (window.location.search.substr(1)) {
 		let id = window.location.search.substr(1);
-		document.getElementById('container').innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${id}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+		container.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${id}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+		container.style.removeProperty('display');
+	} else {
+		container.style.removeProperty('display');
 	}
 </script>
 
